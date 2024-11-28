@@ -1,0 +1,189 @@
+h1, h2 {
+  font-size: 5vw; /* Menggunakan vw untuk ukuran responsif */
+  text-align: center;
+  font-family: Arial;
+  margin: 5px;
+  color: white;
+}
+
+button {
+  display: block;
+  margin: 5px auto;
+  width: 80%; /* Menggunakan persentase untuk lebar tombol */
+  max-width: 200px; /* Maksimal lebar tombol */
+  height: 40px;
+  background-color: white;
+  color: black;
+  font-size: larger;
+  font-family:'Times New Roman', Times, serif;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Membuat 3 kolom */
+  gap: 10px; /* Memberikan jarak antar elemen */
+  width: 90%; /* Lebar container responsif */
+  max-width: 600px; /* Batas maksimal lebar */
+  margin: auto; /* Tengah layar */
+}
+
+
+
+.tanah {
+  width: 100%; /* Memanfaatkan lebar dari grid */
+  aspect-ratio: 3 / 2; /* Menentukan rasio aspek untuk proporsional */
+  position: relative;
+  overflow: hidden;
+}
+
+.tanah::after {
+  content: '';
+  display: block;
+  width: 100%; /* Menggunakan 100% untuk lebar */
+  background: url(../poto-removebg-preview.png) bottom center no-repeat;
+  background-size: 50%;
+  position: absolute;
+  bottom: -25px;
+}
+
+.tikus {
+  width: 100%;
+  height: 100%;
+  background: url(../Boneka_whack_a_mole-removebg-preview.png) bottom center no-repeat;
+  background-size: 60%;
+  position: absolute;
+  top: 100px;
+  transition: top 0.3s;
+}
+
+.tanah.muncul .tikus {
+  top: -15px;
+}
+
+.timer {
+  font-size: 5vw; /* Menggunakan vw untuk ukuran responsif */
+  font-weight: bold;
+  color: rgb(255, 255, 255);
+  text-align: center;
+  margin-top: 5px;
+}
+
+/* Media Queries untuk penyesuaian lebih lanjut */
+@media (max-width: 768px) {
+  h1, h2 {
+    font-size: 8vw; /* Ukuran font lebih kecil untuk layar kecil */
+  }
+
+  button {
+    height: 35px; /* Mengurangi tinggi tombol */
+  }
+
+  .tanah {
+    height: 0px; /* Mengurangi tinggi tanah */
+  }
+
+  .tanah::after {
+    height: 80%; /* Mengurangi tinggi pseudo-element */
+  }
+
+  .tanah {
+    height: 80px;
+    background-size: cover; /* Atau contain, sesuai kebutuhan */
+  }
+  .container {
+    grid-template-columns: repeat(2, 1fr); /* 2 kolom pada layar sedang */
+}
+}
+
+@media (max-width: 480px) {
+  h1, h2 {
+    font-size: 15vw; /* Ukuran font lebih kecil untuk ponsel */
+  }
+
+  button {
+    height: 30px; /* Mengurangi tinggi tombol lebih lanjut */
+  }
+
+  .tanah {
+    height: -200px; /* Mengurangi tinggi tanah lebih lanjut */
+  }
+
+  .tanah {
+    background-size: contain; /* Mengubah ukuran gambar untuk ponsel */
+  }
+
+  .tikus {
+    top: 60%; /* Sesuaikan nilai top untuk ponsel */
+    cursor: url('/palu1.png'), pointer;
+  }
+
+  .container {
+    grid-template-columns: repeat(1, 1fr); /* 1 kolom pada layar kecil */
+  }
+
+  .button-container{
+    display: flex;
+    justify-content: center;
+  }
+
+  .button-container img{
+    display: flex;
+    justify-content: center;
+  }
+
+  #h1{
+    font-size: 2em;
+  }
+
+  #h1-1{
+    font-size: 1em;
+  }
+}
+
+/* Media Queries untuk penyesuaian lebih lanjut */
+@media (max-width: 768px) {
+  .container {
+    grid-template-columns: repeat(2, 1fr); /* 2 kolom pada layar sedang */
+  }
+}
+
+@media (max-width: 480px) {
+  h1, h2 {
+    font-size: 15vw; /* Ukuran font lebih kecil untuk ponsel */
+  }
+
+  button {
+    height: 30px; /* Mengurangi tinggi tombol lebih lanjut */
+  }
+
+  .tanah {
+    height: 100px; /* Atur tinggi tanah agar lebih proporsional */
+  }
+
+  .tanah::after {
+    height: 80%; /* Mengurangi tinggi pseudo-element */
+  }
+
+  .tanah {
+    background-size: contain; /* Mengubah ukuran gambar untuk ponsel */
+  }
+
+  .tikus {
+    top: 60%; /* Sesuaikan nilai top untuk ponsel */
+    cursor: url('/palu1.png'), pointer;
+  }
+
+  .container {
+    grid-template-columns: repeat(2, 1fr); /* 2 kolom pada layar kecil */
+  }
+
+  /* Ganti cursor pada elemen .tikus dan tombol */
+.tikus {
+  cursor: url('/palu1.png') 16 16, pointer; /* Ganti dengan path gambar palu Anda */
+}
+
+button {
+  cursor: url('/palu1.png') 16 16, pointer; /* Ganti dengan path gambar palu Anda */
+}
+
+}

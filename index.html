@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pukul Boneka Tanah</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+
+  <body style="background-image: url(WhatsApp\ Image\ 2024-11-27\ at\ 16.11.13_48f8455e.jpg);">
+
+    <h1 id="h1">Whack A Bear Hararu</h1>
+
+    <div class="button-container">
+      <img src="img/button.png" alt="button" onclick="mulai()" height="100">
+    </div>
+    
+    <h2 class="papan-skor" id="h1-1">Score: <span id="skor">0</span></h2>
+    <h2 class="timer" id="h1-1">&#128336Time: <span id="waktu">30</span> detik</h2>
+
+    <div class="container">
+      <div class="tanah">
+        <div class="tikus"></div>
+      </div>
+      <div class="tanah">
+        <div class="tikus"></div>
+      </div>
+      <div class="tanah">
+        <div class="tikus"></div>
+      </div>
+      <div class="tanah">
+        <div class="tikus"></div>
+      </div>
+      <div class="tanah">
+        <div class="tikus"></div>
+      </div>
+      <div class="tanah">
+        <div class="tikus"></div>
+      </div>
+    </div>
+
+    <!-- Backsound Audio -->
+    <audio id="background-music" loop>
+      <source src="Circus Clown Music - Sound Effect (HD).mp3" type="audio/mp3">
+      Your browser does not support the audio element.
+    </audio>
+
+    <!-- Pop sound effect -->
+    <audio src="Pop.mp3" id="pop"></audio>
+
+    <script src="js/script.js"></script>
+  </body>
+</html>
